@@ -161,7 +161,30 @@ function Login({ onLogin, onSwitchToRegister, onClose }) {
                               onError={handleGoogleError}
                               disabled={loading}
                               useOneTap={false}
+                              logo_alignment="left"
+                              logo_size="medium"
+                              logo_shape="circle"
+                              logo_color="white"
+                              logo_background_color="#4285F4"
+                              logo_border_radius="50%"
+                              logo_border_width="0px"
+                              logo_border_color="#4285F4"
+                              logo_border_style="solid"
+                              logo_padding="8px"
+                              logo_margin="0px"
+                              logo_font_size="16px"
+                              logo_font_color="#4285F4"
+                              logo_font_weight="normal"
+                              logo_font_family="Arial, sans-serif"
+                              logo_text="Sign in with Google"
+                              logo_text_color="#4285F4"
+                              logo_text_size="16px"
+                              logo_text_weight="normal"
+
                               auto_select={false}
+                              prompt="select_account"
+                              style={{ width: '100%' }}
+                              
                               theme="outline"
                               text="signin_with"
                               width="100%"

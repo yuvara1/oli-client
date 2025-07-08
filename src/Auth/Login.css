@@ -219,8 +219,15 @@
 .google-login {
      display: flex;
      flex-direction: column;
+     justify-content: center;
      align-items: center;
      gap: 0.5rem;
+}
+.google-login-wrapper{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
 }
 
 .auth-footer {
