@@ -1,0 +1,638 @@
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Typography Variables */
+:root {
+     /* Font Families */
+     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+     --font-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+     /* Font Sizes */
+     --text-xs: 0.75rem;
+     /* 12px */
+     --text-sm: 0.875rem;
+     /* 14px */
+     --text-base: 1rem;
+     /* 16px */
+     --text-lg: 1.125rem;
+     /* 18px */
+     --text-xl: 1.25rem;
+     /* 20px */
+     --text-2xl: 1.5rem;
+     /* 24px */
+     --text-3xl: 1.875rem;
+     /* 30px */
+     --text-4xl: 2.25rem;
+     /* 36px */
+
+     /* Line Heights */
+     --leading-none: 1;
+     --leading-tight: 1.25;
+     --leading-snug: 1.375;
+     --leading-normal: 1.5;
+     --leading-relaxed: 1.625;
+     --leading-loose: 2;
+
+     /* Letter Spacing */
+     --tracking-tighter: -0.05em;
+     --tracking-tight: -0.025em;
+     --tracking-normal: 0em;
+     --tracking-wide: 0.025em;
+     --tracking-wider: 0.05em;
+     --tracking-widest: 0.1em;
+
+     /* Font Weights */
+     --font-light: 300;
+     --font-normal: 400;
+     --font-medium: 500;
+     --font-semibold: 600;
+     --font-bold: 700;
+     --font-extrabold: 800;
+     --font-black: 900;
+}
+
+/* Base Typography */
+.auth-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 50vh;
+     height: 50vh;
+     width: 100vw;
+     background: none;
+     font-family: var(--font-primary);
+     font-size: var(--text-base);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     text-rendering: optimizeLegibility;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+
+.auth-divider {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.auth-card {
+     background: rgba(24, 24, 24, 0.98);
+     border-radius: 18px;
+     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+     padding: 2.5rem 2rem 2rem 2rem;
+     width: 100%;
+     max-width: 370px;
+     display: flex;
+     flex-direction: column;
+     gap: 1.2rem;
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-title {
+     text-align: center;
+     color: #fff;
+     font-family: var(--font-secondary);
+     font-size: var(--text-4xl);
+     font-weight: var(--font-extrabold);
+     line-height: var(--leading-tight);
+     letter-spacing: var(--tracking-tight);
+     margin-bottom: 0.5rem;
+     background: linear-gradient(135deg, #ffffff 0%, #e50914 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+}
+
+.auth-form {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.input-group {
+     display: flex;
+     flex-direction: column;
+     gap: 0.3rem;
+}
+
+.input-group label {
+     color: #bbb;
+     font-family: var(--font-primary);
+     font-size: var(--text-sm);
+     font-weight: var(--font-medium);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     margin-bottom: 0.1rem;
+}
+
+.input-group input {
+     padding: 0.8rem 1rem;
+     border-radius: 8px;
+     border: 1.5px solid #333;
+     background: #181818;
+     color: #fff;
+     font-family: var(--font-primary);
+     font-size: var(--text-base);
+     font-weight: var(--font-normal);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     outline: none;
+     transition: all 0.3s ease;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group input::placeholder {
+     color: #666;
+     font-weight: var(--font-normal);
+}
+
+.input-group input:focus {
+     border: 1.5px solid #e50914;
+     box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.2);
+     background: rgba(24, 24, 24, 0.9);
+}
+
+.auth-btn {
+     margin-top: 0.5rem;
+     padding: 0.9rem 0;
+     border: none;
+     border-radius: 8px;
+     background: linear-gradient(90deg, #e50914 60%, #b0060f 100%);
+     color: #fff;
+     font-family: var(--font-primary);
+     font-size: var(--text-lg);
+     font-weight: var(--font-semibold);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     cursor: pointer;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+     text-transform: none;
+}
+
+.auth-btn:hover {
+     background: linear-gradient(90deg, #ff1e2d 60%, #e50914 100%);
+     transform: translateY(-2px) scale(1.01);
+     box-shadow: 0 6px 16px rgba(229, 9, 20, 0.4);
+}
+
+.auth-btn:active {
+     transform: translateY(0) scale(0.99);
+}
+
+.divider {
+     text-align: center;
+     color: #888;
+     font-family: var(--font-primary);
+     font-size: var(--text-sm);
+     font-weight: var(--font-medium);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-wide);
+     margin: 0.7rem 0 0.2rem 0;
+     position: relative;
+     text-transform: uppercase;
+}
+
+.divider span {
+     background: rgba(24, 24, 24, 0.98);
+     padding: 0 0.7em;
+     position: relative;
+     z-index: 1;
+}
+
+.divider:before {
+     content: '';
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 50%;
+     height: 1px;
+     background: linear-gradient(90deg,
+               transparent 0%,
+               rgba(255, 255, 255, 0.2) 20%,
+               rgba(255, 255, 255, 0.2) 80%,
+               transparent 100%);
+     z-index: 0;
+}
+
+.google-login {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+.auth-footer {
+     text-align: center;
+     margin-top: 0.5rem;
+     color: #aaa;
+     font-family: var(--font-primary);
+     font-size: var(--text-sm);
+     font-weight: var(--font-normal);
+     line-height: var(--leading-relaxed);
+     letter-spacing: var(--tracking-normal);
+}
+
+.link-btn {
+     background: none;
+     border: none;
+     color: #e50914;
+     font-family: var(--font-primary);
+     font-size: var(--text-sm);
+     font-weight: var(--font-semibold);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     margin-left: 0.4em;
+     cursor: pointer;
+     text-decoration: underline;
+     transition: color 0.3s ease;
+}
+
+.link-btn:hover {
+     color: #ff1e2d;
+     text-decoration: none;
+}
+
+.error {
+     color: #ff4d4f;
+     background: rgba(255, 77, 79, 0.08);
+     border: 1px solid rgba(255, 77, 79, 0.2);
+     border-radius: 6px;
+     padding: 0.5em 0.7em;
+     margin-top: 0.2em;
+     font-family: var(--font-primary);
+     font-size: var(--text-sm);
+     font-weight: var(--font-medium);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     text-align: center;
+}
+
+/* User Profile Dropdown Styles */
+.user-profile {
+     position: relative;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     font-family: var(--font-primary);
+}
+
+.user-profile-btn {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     background: none;
+     border: none;
+     color: #fff;
+     cursor: pointer;
+     padding: 0.5rem;
+     border-radius: 8px;
+     transition: all 0.3s ease;
+     font-family: var(--font-primary);
+}
+
+.user-profile-btn:hover {
+     background: rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar {
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 2px solid #e50914;
+}
+
+.user-name {
+     font-family: var(--font-primary);
+     font-size: var(--text-sm);
+     font-weight: var(--font-medium);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     max-width: 120px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+}
+
+.dropdown-arrow {
+     font-size: var(--text-sm);
+     transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+     transform: rotate(180deg);
+}
+
+.user-dropdown {
+     display: flex;
+     flex-direction: column;
+     background: #000000;
+     position: absolute;
+     top: 100%;
+     right: 0;
+     border: 1px solid #333;
+     border-radius: 12px;
+     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(10px);
+     z-index: 1000;
+     min-width: 200px;
+     overflow: hidden;
+     opacity: 0;
+     transform: translateY(-10px);
+     transition: all 0.3s ease;
+     pointer-events: none;
+}
+
+.user-dropdown.open {
+     /* left:-100px; */
+     opacity: 1;
+     transform: translateY(0);
+     pointer-events: auto;
+}
+
+.dropdown-header {
+     padding: 1rem;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     display: flex;
+     align-items: center;
+     gap: 0.75rem;
+     background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-header .user-avatar {
+     width: 40px;
+     height: 40px;
+}
+
+.dropdown-user-info {
+     flex: 1;
+}
+
+.dropdown-user-name {
+     color: #fff;
+     font-family: var(--font-primary);
+     font-size: var(--text-base);
+     font-weight: var(--font-semibold);
+     line-height: var(--leading-tight);
+     letter-spacing: var(--tracking-normal);
+     margin-bottom: 0.2rem;
+}
+
+.dropdown-user-email {
+     color: #aaa;
+     font-family: var(--font-primary);
+     font-size: var(--text-xs);
+     font-weight: var(--font-normal);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+}
+
+.dropdown-menu {
+     padding: 0.5rem 0;
+}
+
+.dropdown-item {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     gap: 0.75rem;
+     padding: 0.75rem 1rem;
+     color: #fff;
+     text-decoration: none;
+     transition: all 0.3s ease;
+     cursor: pointer;
+     border: none;
+     background: none;
+     width: 100%;
+     text-align: left;
+     font-family: var(--font-primary);
+     font-size: var(--text-sm);
+     font-weight: var(--font-medium);
+     line-height: var(--leading-normal);
+     letter-spacing: var(--tracking-normal);
+}
+
+.dropdown-item:hover {
+     background: rgba(255, 255, 255, 0.1);
+     padding-left: 1.25rem;
+}
+
+.dropdown-item.logout {
+     color: #e50914;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item.logout:hover {
+     background: rgba(229, 9, 20, 0.1);
+}
+
+/* User Profile Badge Styles */
+.dropdown-user-badge {
+     display: inline-block;
+     padding: 0.25rem 0.5rem;
+     border-radius: 4px;
+     font-family: var(--font-primary);
+     font-size: var(--text-xs);
+     font-weight: var(--font-bold);
+     line-height: var(--leading-none);
+     letter-spacing: var(--tracking-wider);
+     margin-top: 0.3rem;
+     text-transform: uppercase;
+}
+
+.dropdown-user-badge.premium {
+     background: linear-gradient(45deg, #ffd700, #ffed4e);
+     color: #000;
+}
+
+.dropdown-user-badge.free {
+     background: rgba(255, 255, 255, 0.1);
+     color: #aaa;
+}
+
+/* Desktop - show full profile */
+@media (min-width: 769px) {
+     .user-profile {
+          display: flex;
+     }
+
+     .user-name {
+          display: block;
+     }
+}
+
+/* Mobile - show dropdown */
+@media (max-width: 768px) {
+     .user-profile {
+          position: relative;
+     }
+
+     .user-name {
+          display: none;
+          /* Hide username on mobile, show in dropdown */
+     }
+
+     .user-dropdown {
+          right: 0px;
+          min-width: 280px;
+          max-width: 90vw;
+     }
+
+     .dropdown-header {
+          padding: 1.2rem;
+     }
+
+     .dropdown-item {
+          padding: 1rem 1.2rem;
+          font-size: var(--text-base);
+     }
+
+     .dropdown-item:hover {
+          padding-left: 1.5rem;
+     }
+
+     .dropdown-user-info {
+          flex: 1;
+     }
+
+     .dropdown-user-name {
+          font-size: var(--text-lg);
+          font-weight: var(--font-semibold);
+     }
+
+     .dropdown-user-email {
+          font-size: var(--text-sm);
+          margin-top: 0.2rem;
+     }
+}
+
+@media (max-width: 480px) {
+     .premium-badge {
+          display: none;
+     }
+     .auth-card {
+          padding: 2rem 1.5rem 1.5rem 1.5rem;
+          border-radius: 12px;
+          max-width: 90vw;
+     }
+
+     .auth-title {
+          font-size: var(--text-3xl);
+     }
+
+     .input-group input {
+          font-size: var(--text-base);
+          padding: 0.8rem 1rem;
+     }
+
+     .auth-btn {
+          font-size: var(--text-base);
+          padding: 1rem 0;
+     }
+
+     .user-dropdown {
+        
+          top: 100%;
+          
+          left: -160px;
+          min-width: 280px;
+          max-width: 95vw;
+     }
+
+     .dropdown-header {
+          padding: 1rem;
+     }
+
+     .dropdown-item {
+          padding: 0.9rem 1rem;
+          font-size: var(--text-sm);
+     }
+
+     .dropdown-item:hover {
+          padding-left: 1.25rem;
+     }
+}
+
+/* Focus States for Accessibility */
+.auth-btn:focus,
+.link-btn:focus,
+.user-profile-btn:focus,
+.dropdown-item:focus {
+     outline: 2px solid #e50914;
+     outline-offset: 2px;
+}
+
+.input-group input:focus {
+     outline: none;
+}
+
+/* Text Selection */
+::selection {
+     background: rgba(229, 9, 20, 0.3);
+     color: #ffffff;
+}
+
+::-moz-selection {
+     background: rgba(229, 9, 20, 0.3);
+     color: #ffffff;
+}
+
+/* Loading States */
+.auth-btn:disabled {
+     opacity: 0.6;
+     cursor: not-allowed;
+     background: rgba(229, 9, 20, 0.5);
+}
+
+.auth-btn:disabled:hover {
+     transform: none;
+     box-shadow: none;
+}
+
+/* Animation for smooth interactions */
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+          transform: translateY(-10px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+.auth-card {
+     animation: fadeIn 0.3s ease-out;
+}
+
+/* High DPI Display Optimization */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+     .auth-container {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+     }
+}
+
+/* Dark theme specific typography adjustments */
+.auth-card {
+     color: #ffffff;
+}
+
+.auth-card *::placeholder {
+     color: #666;
+}
+
+.auth-card input:-webkit-autofill,
+.auth-card input:-webkit-autofill:hover,
+.auth-card input:-webkit-autofill:focus {
+     -webkit-box-shadow: 0 0 0 30px #181818 inset;
+     -webkit-text-fill-color: #fff;
+     transition: background-color 5000s ease-in-out 0s;
+}

@@ -1,0 +1,36 @@
+/* Global styles to suppress Mux Player warnings */
+* {
+     box-sizing: border-box;
+}
+
+body {
+     margin: 0;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+
+/* Suppress Media Chrome styling issues */
+mux-player,
+media-chrome {
+     --media-control-bar-display: none !important;
+     --controls: none !important;
+}
+
+/* Hide all media chrome elements globally */
+media-chrome,
+media-control-bar,
+media-play-button,
+media-mute-button,
+media-volume-range,
+media-time-display,
+media-progress-range,
+media-fullscreen-button,
+media-settings-button,
+media-pip-button {
+     display: none !important;
+     visibility: hidden !important;
+     opacity: 0 !important;
+}
